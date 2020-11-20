@@ -1,7 +1,9 @@
 ﻿using System;
 
 namespace Bank
-{
+{   /// <summary>
+/// Classe marotassa
+/// </summary>
     public class BankAccount
     {   // atributos da classe
         private readonly string m_customerName;
@@ -35,8 +37,12 @@ namespace Bank
             {
                 throw new ArgumentOutOfRangeException("amount");
             }
-            m_balance += amount;
+            m_balance -= amount;
         }
+        /// <summary>
+        /// Executa um crédito na conta
+        /// </summary>
+        /// <param name="amount">quantidade valor para crédito</param>
         public void Credit(double amount)
         {
             if (amount < 0)
